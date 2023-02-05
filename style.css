@@ -81,9 +81,6 @@ h1,h2,h3,h4{
 h2{
     margin-bottom: 1.5rem;
 }
-.Text p {
-    font-family: "Barlow";
-}
 .Text > h4::after{
     content: "";
     width: 110%;
@@ -125,8 +122,75 @@ h2{
 }
 .Photography{
     background-image: url(./images/mobile/image-photography.jpg);
+    color: hsl(198, 62%, 26%);
 }
 p{
     line-height: 1.5rem;
+    color:hsl(232, 10%, 55%);
+    font-family: "Barlow";
 }
+.Photography p {
+    color: hsl(198, 62%, 26%);
+}
+.graphicDesing{
+    color: hsl(167, 40%, 24%);
+}
+.graphicDesing P {
+    color: hsl(167, 40%, 24%);
+}
+.testimonials{
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: "Barlow";
+    margin-bottom: 5rem;
+}
+.testimonials p {
+    margin: 1.5rem auto;
+    max-width: 330px;
+}
+.testimonials img {
+    width: 4.5rem;
+    border-radius: 50%;
+    margin-top: 4rem;
+}
+.testimonials sub{
+    color:hsl(210, 4%, 67%);
+}
+.testimonials h3{
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 0.9rem;
+    margin-top: 3.5rem;
+    color:hsl(210, 4%, 67%);
+}
+.galleryImages{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+footer{
+  background-color: hsl(167, 44%, 70%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 0 4rem 0;
+  
+}
+.about{
+    display: flex;
+    gap: 2.8rem;
+    justify-content: center;
+    width: 375px;
+   
+}
+.about p {
+    color:hsl(168, 34%, 41%) ;
+    margin: 1.5rem 0 4rem 0;
+}
+.social{
+    display: flex;
+    gap: 1.5rem;
+}
+
 
