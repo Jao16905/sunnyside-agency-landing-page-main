@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
 }
 :root{
     font-size: 18px;
@@ -19,13 +25,38 @@ nav ul{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 200px;
-    width: 90vw;
+    height: 18rem;
+    width: 18rem;
     justify-content: space-around;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: none;
+    right: 1.2rem;
+    transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    font-family: "Barlow";
+    z-index: 2;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+nav ul.active{
+    opacity: 1;
+    transform: translateY(70%);
+    -moz-transform: translateY(70%);
+    -o-transform: translateY(70%);
+    -ms-transform: translateY(70%);
+}
+.contact{
+    font-family: "Fraunces";
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    background-color: hsl(51, 100%, 49%);
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    transition: 0.3s ease-in-out;
 }
 a{
     text-decoration: none;
@@ -36,6 +67,9 @@ nav .logo{
 }
 nav .hamburguer{
     float: right;
+}
+nav .hamburguer.active{
+    opacity: 0.7;
 }
 main{
     display: grid;
@@ -52,6 +86,9 @@ main{
 }
 .title svg{
     transform: translateY(10vw);
+    -moz-transform: translateY(10vw);
+    -o-transform: translateY(10vw);
+    -ms-transform: translateY(10vw);
 }
 
 section img{
@@ -71,8 +108,9 @@ h1,h2,h3,h4{
 .Text{
     text-align: center;
     max-width: 18rem;
-    background-color: #FFF;
+    
     margin: 3rem auto;
+    
 }
 .Text h2{
     font-size: 1.8rem;
@@ -89,11 +127,14 @@ h2{
     position: absolute;
     left: 0;
     transform: translateX(-5%);
+    -o-transform: translateX(-5%);
+    -ms-transform: translateX(-5%);
+    -moz-transform: translateX(-5%);
     bottom: -0.1rem;
     z-index: -1;
     
 }
-.transform h4::after{
+.transform-text h4::after{
     background-color: #FEF1BC;
 }
 .Text > h4 {
@@ -101,8 +142,9 @@ h2{
     display: inline-block;
     z-index: 0;
     margin-top: 1.5rem;
+    cursor: pointer;
 }
-.standOut h4::after{
+.standOut-text h4::after{
     background-color: #ffdad5;
 }
 .graphicDesing, .Photography{
@@ -144,11 +186,11 @@ p{
     align-items: center;
     text-align: center;
     font-family: "Barlow";
-    margin-bottom: 5rem;
+    margin: 5rem 0;
 }
 .testimonials p {
     margin: 1.5rem auto;
-    max-width: 330px;
+    max-width: 350px;
 }
 .testimonials img {
     width: 4.5rem;
@@ -174,7 +216,8 @@ footer{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2.5rem 0 4rem 0;
+  padding: 2.5rem 0 4rem ;
+  width: 100%;
   
 }
 .about{
@@ -191,6 +234,92 @@ footer{
 .social{
     display: flex;
     gap: 1.5rem;
+}
+@media screen and (min-width: 950px) {
+    header{
+        background-image: url(./images/desktop/image-header.jpg);
+    }
+    .grid-layout{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 100vw;
+    }
+    .graphicDesing, .Photography{
+        min-height:50vw;
+        background-image: url(./images/desktop/image-graphic-design.jpg);
+        grid-row: 3;
+    }
+    .Photography{
+        background-image: url(./images/desktop/image-photography.jpg);
+    }
+    .transform {
+        grid-area: 1/2;
+        margin-bottom: 0;
+    }
+    .standOut{
+        grid-area: 2/1;
+        margin-bottom: 0;
+    }
+    .Text{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        max-width: 450px;
+    }
+    
+    .description img{
+        height: 100%;
+    }
+    .Text h4{
+        width:10ch;
+    }
+    .galleryImages{
+        grid-template-columns: repeat(4, auto);
+        width: 100vw;
+    }
+    .images-testimonials{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content:space-around;
+        width: 100vw;
+    }
+    .hamburguer{
+        display: none;
+    }
+    nav ul{
+        background-color: transparent;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        opacity: 1;
+        position: relative;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        transform: translateY(0);
+        width: 500px;
+    }
+    nav{
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+
+        width: 95%;
+    }
+    nav .logo {
+        float: none;
+    }
+    a{
+
+        color:#fff ;
+    }
+    .contact:hover{
+        color: #fff;
+        background-color: hsla(0, 0%, 100%, 0.3);
+    }
 }
 
 
